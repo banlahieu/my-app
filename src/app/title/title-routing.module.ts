@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { TitleComponent } from './title/title.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: TitleComponent
+  }
 ];
 
 @NgModule({
