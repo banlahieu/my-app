@@ -13,6 +13,8 @@ export class Page1ListComponent implements OnInit {
   page1 = new Page1('FPTA', 10);
   name = '';
 
+  predictedNumber: number;
+
   constructor(private service: Page1Service
     
   ) { }
@@ -28,6 +30,10 @@ export class Page1ListComponent implements OnInit {
       data => console.log('success', data),
       error => console.log('error')
     )
+  }
+
+  predict() {
+    this.predictedNumber = 3;
   }
 
 }

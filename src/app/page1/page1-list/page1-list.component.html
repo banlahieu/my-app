@@ -1,22 +1,25 @@
-<p>
-  page1-list works!
-  <br>
-</p>
-
-  <form #userForm="ngForm"  novalidate (ngSubmit) = onSubmit()>
-    {{userForm.value | json}}
-    <br>
-    {{page1.name}} {{page1.grade}}
-
-    <br>
-
-    <input name="username" required #username1="ngModel" [(ngModel)] = "page1.name">
-    <small class="username-input" *ngIf="username1?.errors?.required">Name is required</small>
-    <br>
-
-
-    <button name="btn" [disabled]="userForm.form.invalid" class="submit-btn" type="submit"> Submit </button>
-
-  </form>
+  <div class="ui-g-12">
+    <p>
+      page1-list works!
+    </p>
+  </div>
+  <div class="ui-g-12">
+    <form #userForm="ngForm"  novalidate (ngSubmit) = onSubmit()>
+      {{userForm.value | json}}
+      <br>
+      {{page1.name}} {{page1.grade}}
+      <br>
+      <input name="username" required #username1="ngModel" [(ngModel)] = "page1.name">
+      <small class="username-input" *ngIf="username1?.errors?.required">Name is required</small>
+      <br>
+      <button name="btn" [disabled]="userForm.form.invalid" class="submit-btn" type="submit"> Submit </button>
+    </form>
+  </div>
+  <div class="ui-g-12">
+    <button (click)=predict()>Predict</button>
+  </div>
+  <div class="ui-g-12">
+    {{predictedNumber}}
+  </div>
 
 
