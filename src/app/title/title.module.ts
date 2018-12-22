@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TitleComponent } from './title/title.component';
 
 @NgModule({
-  declarations: [TitleComponent],
+  declarations: [],
   imports: [
     CommonModule
   ]
