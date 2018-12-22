@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Page1 } from '../share/page1.model';
 import { Page1Service } from './page1-list.service';
+import * as tf from '@tensorflow/tfjs';
 
 @Component({
   selector: 'app-page1-list',
