@@ -16,7 +16,6 @@ import { TitleComponent } from './title/title/title.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
