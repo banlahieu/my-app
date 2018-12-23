@@ -1,0 +1,10 @@
+{
+    "/api": {
+    "target": "http://www.parsehub.com...",
+    "secure": false,
+    "pathRewrite": {
+    "^/api": ""
+    },
+    "changeOrigin": true
+    }
+}

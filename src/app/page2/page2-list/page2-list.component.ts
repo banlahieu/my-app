@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Page2Service } from './page2-list.service';
 
 @Component({
   selector: 'app-page2-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page2ListComponent implements OnInit {
 
-  constructor() { }
+  predictedNumber: any;
+
+  log: any;
+
+  constructor(private service: Page2Service) { }
 
   ngOnInit() {
   }
 
+  predict() {
+    console.log(this.service.getData());
+  }
 }

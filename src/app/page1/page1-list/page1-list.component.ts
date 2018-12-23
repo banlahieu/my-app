@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Page1 } from '../share/page1.model';
 import { Page1Service } from './page1-list.service';
-import * as tf from '@tensorflow/tfjs';
 
 @Component({
   selector: 'app-page1-list',
@@ -13,7 +12,7 @@ export class Page1ListComponent implements OnInit {
   page1 = new Page1('FPTA', 10);
   name = '';
 
-  predictedNumber: number;
+  
 
   constructor(private service: Page1Service
     
@@ -32,8 +31,6 @@ export class Page1ListComponent implements OnInit {
     )
   }
 
-  predict() {
-    this.predictedNumber = 3;
-  }
+
 
 }

@@ -12,14 +12,9 @@
       <input name="username" required #username1="ngModel" [(ngModel)] = "page1.name">
       <small class="username-input" *ngIf="username1?.errors?.required">Name is required</small>
       <br>
-      <button name="btn" [disabled]="userForm.form.invalid" class="submit-btn" type="submit"> Submit </button>
+      <button name="button" [disabled]="userForm.form.invalid" class="submit-btn" type="submit"> Submit </button>
     </form>
   </div>
-  <div class="ui-g-12">
-    <button (click)=predict()>Predict</button>
-  </div>
-  <div class="ui-g-12">
-    {{predictedNumber}}
-  </div>
+
 
 
