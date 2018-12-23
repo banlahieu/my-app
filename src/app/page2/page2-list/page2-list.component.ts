@@ -18,6 +18,13 @@ export class Page2ListComponent implements OnInit {
   }
 
   predict() {
-    console.log(this.service.getData());
+    this.service.getData().subscribe( res => {
+      console.log("RES");
+      console.log(res);
+    },
+    error => {
+      console.log("ERROR");
+      console.log(error);
+    });
   }
 }

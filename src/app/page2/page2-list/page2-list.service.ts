@@ -22,19 +22,25 @@ export class Page2Service {
 
         let headers = new HttpHeaders();
 
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Credentials', 'true');
-        headers.append('Authorization', this.API_KEY);
+        // headers = headers.append('Access-Control-Allow-Origin','*');
+
+        // headers = headers.set('Content-Type', 'text/plain');
+        // headers = headers.set('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8');
+        // headers = headers.set('Accept-Encoding', 'gzip, deflate, br');
+        // headers = headers.set('Cache-Control', '0');
+        // headers = headers.set('Access-Control-Allow-Credentials', 'true');
+        // headers = headers.set('Server', 'nginx/1.13.7');
+        // headers = headers.set('Content-Encoding', 'gzip');
+        // headers = headers.set('Accept-Ranges', 'bytes');
+        // headers = headers.set('Strict-Transport-Security', 'max-age=15724800');
+        // headers = headers.set('Etag', '5c1f1112-13c');
+        // headers = headers.set('body', '');
         
         let params = new HttpParams();
 
-        params.append('api_key', this.API_KEY);
-        params.append('format', 'json');
+        params = params.set('api_key', this.API_KEY);
 
-        return this.http.get(this.url, {headers, params}).subscribe( res => {
-            console.log(res);
-        });
+        return this.http.get(this.url, { headers: headers, params: params});
     }
 
 }

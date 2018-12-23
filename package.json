@@ -33,6 +33,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
+    "parsehub-plaid": "0.0.2",
     "primeng": "^7.0.3",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
